@@ -1,7 +1,16 @@
-import React from "react";
+import { motion } from "framer-motion";
 
-const SectionWrapper = () => {
-  return <div>SectionWrapper</div>;
+import { styles } from "../styles";
+import { staggerContainer } from "../utils/motion";
+
+const SectionWrapper = (Component, idName) => {
+  function HOC() {
+    return (
+      <motion.div>
+        <Component />
+      </motion.div>
+    );
+  }
 };
 
 export default SectionWrapper;
